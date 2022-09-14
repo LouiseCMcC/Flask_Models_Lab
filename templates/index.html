@@ -1,12 +1,17 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{title}} - My Order List</title>
+        <link rel="stylesheet" href="/static/style.css"/>
 
     </head>
-    <body>
-        <h1>My Order List!</h1>
+    <body id="main_body">
+        <h1 id="my_header">My Order List!</h1>
         {% for order in orders %}
-        <p>
+        <p id="main_writing">
         <a href="/order_list/{{orders.index(order)}}" > {{order.customer_name}} : {{order.order_date}} : {{order.quantity}} : {{order.book_title}}</a>
         </p>
         {% endfor %}
